@@ -1,0 +1,49 @@
+{
+    "name": "HubSpot",
+    "lowCaseName": "hubspot",
+    "description": "A HubSpot for MODX Revolution.",
+    "author": "Sterc",
+    "version": "1.0.0-pl",
+    "package":{
+        "menus": [{
+            "text": "hubspot",
+            "description": "hubspot.desc",
+            "parent": "components",
+            "action": "home",
+            "permissions": "hubspot"
+        }],
+        "elements": {
+            "plugins": [{
+                "name": "HubSpot",
+                "file": "hubspot.plugin.php",
+                "events": [
+                    "OnMODXInit", "OnHandleRequest", "pdoToolsOnFenomInit"
+                ]
+            }]
+        },
+        "systemSettings": [{
+            "key": "branding_url",
+            "value": "//www.sterc.com",
+            "area": "hubspot"
+        },{
+            "key": "branding_url_help",
+            "value": "//www.sterc.com",
+            "area": "hubspot"
+        }]
+    },
+    "build":{
+        "readme": "docs/readme.txt",
+        "license": "docs/license.txt",
+        "changelog": "docs/changelog.txt",
+        "resolver": {
+            "after": [
+                "permissions.resolver.php",
+                "setupoptions.resolver.php",
+                "stercextra.resolver.php"
+            ]
+        },
+        "setupOptions":{
+            "source": "setup.options.php"
+        }
+    }
+}
