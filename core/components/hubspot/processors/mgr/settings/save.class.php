@@ -48,7 +48,7 @@ class HubspotSettingsSaveProcessor extends modObjectProcessor
             }
         }
 
-        return $this->success('JAJAJAJAJA');
+        return $this->success($this->modx->lexicon('hubspot.success'));
     }
 
     /**
