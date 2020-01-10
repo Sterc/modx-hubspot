@@ -1,0 +1,172 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '785036d06230a31d91e688f145ae561d' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '702c51cceb7429c766f94e70eee8c555' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnMODXInit","priority":0,"propertyset":0}',
+              'guid' => '6c9ec82fd28839909b7ba6eda5504329',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnMODXInit',
+              ),
+              'signature' => 'd3052793bf09888aae33e29e5cbf29ba',
+            ),
+            '0e67c29ba71ee61fd477502e084fc246' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => 'd4e16a0fd55eaa1729b6fb46aa31ef9f',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => '3c5b92dcb338c9a69288140975ced350',
+            ),
+            '3031b360fdcb13a901db596f3d31b4fc' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"pdoToolsOnFenomInit","priority":0,"propertyset":0}',
+              'guid' => '9fd89909c067eb477da9e70c4a8bb606',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'pdoToolsOnFenomInit',
+              ),
+              'signature' => '45959b65eaa730482840fbdae1d12228',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"HubSpot","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * HubSpot\\n *\\n * Copyright 2020 by Sterc <oenetjeerd@sterc.nl>\\n *\\/\\n\\nif (in_array($modx->event->name, [\'OnMODXInit\', \'OnHandleRequest\', \'pdoToolsOnFenomInit\'], true)) {\\n    $instance = $modx->getService(\'hubspotplugins\', \'HubspotPlugins\', $modx->getOption(\'hubspot.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/hubspot\\/\') . \'model\\/hubspot\\/\');\\n\\n    if ($instance instanceof HubspotPlugins) {\\n        $method = lcfirst($modx->event->name);\\n\\n        if (method_exists($instance, $method)) {\\n            $instance->$method($scriptProperties);\\n        }\\n    }\\n}","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * HubSpot\\n *\\n * Copyright 2020 by Sterc <oenetjeerd@sterc.nl>\\n *\\/\\n\\nif (in_array($modx->event->name, [\'OnMODXInit\', \'OnHandleRequest\', \'pdoToolsOnFenomInit\'], true)) {\\n    $instance = $modx->getService(\'hubspotplugins\', \'HubspotPlugins\', $modx->getOption(\'hubspot.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/hubspot\\/\') . \'model\\/hubspot\\/\');\\n\\n    if ($instance instanceof HubspotPlugins) {\\n        $method = lcfirst($modx->event->name);\\n\\n        if (method_exists($instance, $method)) {\\n            $instance->$method($scriptProperties);\\n        }\\n    }\\n}"}',
+        'guid' => 'd6dcf3230be7f5e18ac9bc3393a0f23d',
+        'native_key' => NULL,
+        'signature' => 'ae9e12c1849445abbf2c23145fd83ff4',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'hubspot',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"hubspot-1.0.0-pl\\/modCategory\\/97bb2b36a93446a7f5c285f56dff0c08\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"hubspot"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"hubspot-1.0.0-pl\\/modCategory\\/97bb2b36a93446a7f5c285f56dff0c08\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"hubspot"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"hubspot-1.0.0-pl\\/modCategory\\/97bb2b36a93446a7f5c285f56dff0c08.permissions.resolver.resolver","type":"php","name":"permissions.resolver"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"hubspot-1.0.0-pl\\/modCategory\\/97bb2b36a93446a7f5c285f56dff0c08.setupoptions.resolver.resolver","type":"php","name":"setupoptions.resolver"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"hubspot-1.0.0-pl\\/modCategory\\/97bb2b36a93446a7f5c285f56dff0c08.stercextra.resolver.resolver","type":"php","name":"stercextra.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '45ed13a471955e2ec42006fd7244be18',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '97bb2b36a93446a7f5c285f56dff0c08',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"HubSpot","rank":0}',
+);

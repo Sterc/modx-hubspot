@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'hubspot',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b2559bb39bb60a0193eda3dc338f1499',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '92cfa0802a1eb24fc6100e3f77026ec9',
+  'native_key' => 'hubspot.branding_url',
+  'object' => '{"key":"hubspot.branding_url","value":"\\/\\/www.sterc.com","xtype":"textfield","namespace":"hubspot","area":"hubspot","editedon":null}',
+);
